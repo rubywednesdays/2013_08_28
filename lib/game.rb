@@ -1,17 +1,9 @@
 class Game
-  def roll=(value)
-    @roll = value
-  end
-
-  def roll
-    @roll
-  end
-
-  def first_roll=(value)
-  end
+  attr_accessor :roll
+  attr_writer :first_roll
 
   def status
-    if roll == 7 || roll == 11
+    if [7, 11].include?(roll)
       "won"
     else
       "lost"
