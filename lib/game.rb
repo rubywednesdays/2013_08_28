@@ -9,4 +9,8 @@ class Game
       "lost"
     end
   end
+
+  def point
+    roll
+  end
 end
