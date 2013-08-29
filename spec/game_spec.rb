@@ -45,53 +45,16 @@ describe Game do
     end
 
     context "sets the point" do
-      it "if roll is a 4" do
-        game.roll = 4
-
-        game.status
-        
-        expect(game.point).to eq(4)
+      point_numbers = [4,5,6,8,9,10]
+      
+      it "if roll is a point_number" do
+        point_numbers.each do |point_number|
+          game.roll = point_number
+          game.status
+          expect(game.point).to eq(point_number)
+        end
       end
 
-      it "if roll is a 5" do
-        game.roll = 5
-        
-        game.status
-        
-        expect(game.point).to eq(5)
-      end
-
-      it "if roll is a 6" do
-        game.roll = 6
-        
-        game.status
-        
-        expect(game.point).to eq(6)
-      end
-
-      it "if roll is a 8" do
-        game.roll = 8
-        
-        game.status
-        
-        expect(game.point).to eq(8)
-      end
-
-      it "if roll is a 9" do
-        game.roll = 9
-        
-        game.status
-        
-        expect(game.point).to eq(9)
-      end
-
-      it "if roll is a 10" do
-        game.roll = 10
-        
-        game.status
-        
-        expect(game.point).to eq(10)
-      end
     end
   end
 
